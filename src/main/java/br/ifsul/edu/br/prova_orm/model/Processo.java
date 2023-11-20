@@ -17,7 +17,7 @@ public class Processo {
     private String descricaoProcesso;
     private Situacao situacaoProcesso;
 
-    @ManyToMany(mappedBy = "advogado")
+    @ManyToMany(mappedBy = "processos")
     private List<Advogado> advogados;
     @OneToMany(mappedBy = "processo")
     private List<Audiencia> audiencias;
