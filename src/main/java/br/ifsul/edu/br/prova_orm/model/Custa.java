@@ -1,4 +1,4 @@
-package model;
+package br.ifsul.edu.br.prova_orm.model;
 
 import jakarta.persistence.*;
 
@@ -8,6 +8,7 @@ import java.util.Date;
 @Table(name="custa")
 public class Custa {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private Date dataCusta;
     private String descricaoCusta;
     private double valorCusta;

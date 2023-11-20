@@ -1,4 +1,4 @@
-package model;
+package br.ifsul.edu.br.prova_orm.model;
 
 import jakarta.persistence.*;
 
@@ -9,6 +9,7 @@ import java.util.List;
 public class Advogado {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private Long oabAdvogado;
     private String nomeAdvogado;
     private String enderecoAdvogado;
