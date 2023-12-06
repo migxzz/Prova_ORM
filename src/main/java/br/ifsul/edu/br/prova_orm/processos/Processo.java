@@ -1,28 +1,25 @@
-package br.ifsul.edu.br.prova_orm.model;
+package br.ifsul.edu.br.prova_orm.processos;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.List;
 
 @Entity (name="Processo")
 @Table(name="processos")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Processo {
     @Id @GeneratedValue( strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long numeroProcesso;
-    private Date aberturaProcesso;
+    private String numeroProcesso;
+    private String  aberturaProcesso;
 
     private Date conclusaoProcesso;
     private String descricaoProcesso;
-    private Situacao situacaoProcesso;
-
-    @ManyToMany(mappedBy = "processos")
-    private List<Advogado> advogados;
-    @OneToMany(mappedBy = "processo")
-    private List<Audiencia> audiencias;
-    @OneToMany(mappedBy = "processo")
-    private List<Custa>custas;
 
     public int registrarProcesso(){
         return 0;
@@ -38,4 +35,5 @@ public class Processo {
     public int atualizarProcesso(){
         return 0;
     }
+
 }

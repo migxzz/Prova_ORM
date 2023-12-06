@@ -8,6 +8,8 @@ public class ProvaOrmApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ProvaOrmApplication.class, args);
+        HomeController.main(null);
     }
+
 
 }
